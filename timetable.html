@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Room Timetable VY202</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .name {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        /* TIME/Day header - light teal/blue */
+        .time-day-header {
+            background-color: #b3e5fc;
+            font-weight: bold;
+        }
+        
+        /* Time slot headers - light green */
+        .time-header {
+            background-color: #c8e6c9;
+            font-weight: bold;
+        }
+        
+        /* Monday, Wednesday, Friday rows - light green */
+        .row-green {
+            background-color: #c8e6c9;
+        }
+        
+        /* Tuesday, Thursday, Saturday rows - white */
+        .row-white {
+            background-color: #ffffff;
+        }
+        
+        /* RECESS column cells - light blue/cyan */
+        .recess-cell {
+            background-color: #b3e0ff;
+            font-weight: bold;
+        }
+        
+        /* Yellow highlight for specific cell */
+        .highlight-yellow {
+            background-color: #ffeb3b;
+        }
+        
+        /* Smaller font for "to" times */
+        .to-time {
+            font-size: 0.9em;
+        }
+        
+        /* Day column */
+        .day-cell {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CLASS ROOM NO.:VY202</h1>
+        <p class="name">Paras Kore</p>
+        
+        <table>
+            <!-- First header row -->
+            <tr>
+                <th rowspan="2" class="time-day-header">TIME/Day</th>
+                <th class="time-header">8.30 a.m.</th>
+                <th class="time-header">9.30 a.m.</th>
+                <th class="time-header">10.30 a.m.</th>
+                <th class="time-header">10.45 a.m.</th>
+                <th class="time-header">11.45 a.m.</th>
+                <th class="time-header">12.45</th>
+                <th class="time-header">1.30 p.m.</th>
+                <th class="time-header">2.30 p.m.</th>
+                <th rowspan="2" class="time-header">3.30. p.m. to 6.00pm</th>
+            </tr>
+            
+            <!-- Second header row (to times) -->
+            <tr>
+                <th class="time-header to-time">to 9.30 a.m.</th>
+                <th class="time-header to-time">to 10.30 a.m.</th>
+                <th class="time-header to-time">to 10.45</th>
+                <th class="time-header to-time">to 11.45 a.m.</th>
+                <th class="time-header to-time">to 12.45 p.m.</th>
+                <th class="time-header to-time">to 1.30</th>
+                <th class="time-header to-time">to 2.30 p.m.</th>
+                <th class="time-header to-time">to 3.30 p.m.</th>
+            </tr>
+            
+            <!-- Monday -->
+            <tr class="row-green">
+                <td class="day-cell">Monday</td>
+                <td>Seminar</td>
+                <td>Mentor Mentee Meeting</td>
+                <td class="recess-cell">R</td>
+                <td>H2-CLCCL</td>
+                <td></td>
+                <td class="recess-cell">R</td>
+                <td>ML</td>
+                <td>PE-CLCC</td>
+                <td>CC(Algozenith) VY-028,029, 226, 227</td>
+            </tr>
+            
+            <!-- Tuesday -->
+            <tr class="row-white">
+                <td class="day-cell">Tuesday</td>
+                <td class="highlight-yellow">H1-FSDL VY225</td>
+                <td></td>
+                <td class="recess-cell">E</td>
+                <td>H1-CLCCL H2-FSDL</td>
+                <td></td>
+                <td class="recess-cell">E</td>
+                <td>TOC</td>
+                <td>DEDV</td>
+                <td rowspan="2">CC(Algozenith) VY-028,029, 226, 227</td>
+            </tr>
+            
+            <!-- Wednesday -->
+            <tr class="row-green">
+                <td class="day-cell">Wednesday</td>
+                <td>H1, H2 PBL-IV(E)</td>
+                <td>TOC</td>
+                <td class="recess-cell">C</td>
+                <td>H1-MLL H2-MPJ</td>
+                <td></td>
+                <td class="recess-cell">C</td>
+                <td>PE-CLOC</td>
+                <td>DEDV</td>
+            </tr>
+            
+            <!-- Thursday -->
+            <tr class="row-white">
+                <td class="day-cell">Thursday</td>
+                <td>ML</td>
+                <td>TOC</td>
+                <td class="recess-cell">E</td>
+                <td>H1-MPJ H2-PRL-IV</td>
+                <td></td>
+                <td class="recess-cell">E</td>
+                <td colspan="2">CC(Codeshef) VY127</td>
+                <td>Seminar<br>CC(Codeshef) VY127<br>CC(Algozenith) VY-028,029, 226, 227</td>
+            </tr>
+            
+            <!-- Friday -->
+            <tr class="row-green">
+                <td class="day-cell">Friday</td>
+                <td>Seminar</td>
+                <td>H1, H2- MPJ (E)</td>
+                <td class="recess-cell">S</td>
+                <td>H1-PBL-IV H2-MLL</td>
+                <td></td>
+                <td class="recess-cell">S</td>
+                <td>ML</td>
+                <td>PE-CLCC</td>
+                <td>CC(Algozenith) VV-028,029, 226, 227</td>
+            </tr>
+            
+            <!-- Saturday -->
+            <tr class="row-white">
+                <td class="day-cell">Saturday</td>
+                <td></td>
+                <td></td>
+                <td class="recess-cell">S</td>
+                <td></td>
+                <td></td>
+                <td class="recess-cell">S</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
